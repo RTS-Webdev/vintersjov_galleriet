@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Galleriet</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header class="nav">
+			<img id="logo" src="./img/logo.svg" />
+			<button id="menu">
+				<img id="menu-img" src="./img/menu.svg" onclick="toggleMenu()" />
+			</button>
+			<div class="dropdown-content">
+				<figure>
+					<img id="close-menu" src="./img/x.svg" onclick="closeMenu()" alt="close menu" />
+				</figure>
+				<div class="dropdown-content-list">
+					<ul>
+						<li><a href="#">Hjem</a></li>
+						<li><a href="oplevelser.html">Oplevelser</a></li>
+						<li><a href="tilbud.html">Mine tilbud</a></li>
+						<li><a href="kontakt.html">Kontakt</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main>
+			<article id="hero_article">
+				<figure>
+					<img
+						src="./img/hero_image.png"
+						alt="Et billede af en biograf"
+					/>
+					<div class="text">
+						<h2>Vinterferie i Galleriet</h2>
+						<h4>Korsbæks shoppingcenter</h4>
+					</div>
+				</figure>
+			</article>
+			<div id="sub_hero_article">
+				<article class="oplevelser_article">
+					<h2>Masser af oplevelser! spar op til 25%</h2>
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing
+						elit. Molestias, maiores sit? Perspiciatis facere
+						quaerat incidunt numquam culpa assumenda vero
+						perferendis reprehenderit minima odio quisquam magnam
+						omnis excepturi, praesentium ipsum, ex, reiciendis
+						cupiditate corrupti? Dignissimos officiis magnam
+						perspiciatis maxime fugit accusantium, minus ea
+						distinctio, praesentium, nostrum vel ab corporis iste
+						facilis!.
+					</p>
+				</article>
+				<article class="tilbud_article">
+					<h2>Sammensæt selv dit tilbud</h2>
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing
+						elit. Molestias, maiores sit? Perspiciatis facere
+						quaerat incidunt numquam culpa assumenda vero
+						perferendis reprehenderit minima odio quisquam magnam
+						omnis excepturi, praesentium ipsum, ex, reiciendis
+						cupiditate corrupti?
+					</p>
+					<button>SE TILBUD</button>
+				</article>
+			</div>
+			<div id="galleriets_butikker">
+				<h2>Galleriets butikker</h2>
+				<figure>
+					<div>
+						<img src="./img/icons/føtex.svg" alt="Føtex logo" />
+					</div>
+					<div>
+						<img src="./img/icons/normal.svg" alt="Normal logo" />
+					</div>
+					<div>
+						<img
+							src="./img/icons/slikhytten.svg"
+							alt="Slikhytten logo"
+						/>
+						<p>Slikhytten</p>
+					</div>
+					<div>
+						<img
+							src="./img/icons/korsbaekbio.svg"
+							alt="Korsbæk Biograf logo"
+						/>
+					</div>
+					<div>
+						<img
+							src="./img/icons/korsbaekswim.svg"
+							alt="Korsbaek Svømmehal logo"
+						/>
+						<p>Korsbæk Svømmehal</p>
+					</div>
+				</figure>
+			</div>
+		</main>
+		<footer id="footer">
+			<figure>
+				<img src="./img/logo.svg" alt="Galleriet logo" />
+			</figure>
+			<div>
+				<article>
+					<address>Galleristrædet 1</address>
+					<p>4021 Korsbæk</p>
+				</article>
+				<button>
+					<img src="./img/arrow.svg" alt="arrow" />
+				</button>
+			</div>
+			<article>
+				<p>+45 2143 6587</p>
+				<p>hej@galleriet-korsbaek.com</p>
+			</article>
+			<small>© 2021 Armadillo Design Lab.</small>
+		</footer>
+	</body>
+
+	<script src="script.js" defer></script>
+</html>
