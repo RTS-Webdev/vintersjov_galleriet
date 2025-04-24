@@ -19,119 +19,63 @@
 		/>
 	</head>
 	<body>
-		<header class="nav">
-			<img id="logo" src="./img/logo.svg" />
-			<button id="menu">
-				<img id="menu-img" src="./img/menu.svg" onclick="toggleMenu()" />
+		<header id="header">
+			<img src="assets/svgs/logo.svg" alt="logo" class="logo" />
+
+			<!-- dropdown button for mobile -->
+			<button id="dropdown">
+				<img src="assets/svgs/menu.svg" alt="menu" id="open" />
+				<img src="assets/svgs/x.svg" alt="close" id="close" />
 			</button>
-			<div class="dropdown-content">
-				<figure>
-					<img id="close-menu" src="./img/x.svg" onclick="closeMenu()" alt="close menu" />
-				</figure>
-				<div class="dropdown-content-list">
-					<ul>
-						<li><a href="#">Hjem</a></li>
-						<li><a href="oplevelser.html">Oplevelser</a></li>
-						<li><a href="tilbud.html">Mine tilbud</a></li>
-						<li><a href="kontakt.html">Kontakt</a></li>
-						<li><a href="faq.html">FAQ</a></li>
-					</ul>
-				</div>
-			</div>
+
+			<!-- navigation links for mobile -->
+			<nav id="links_mobile"></nav>
+			
+			<!-- navigation links for desktop -->
+			<nav class="links_desktop">
+				<ul>
+					<li><a href="#">Hjem</a></li>
+					<li><a href="#">Oplevelser</a></li>
+					<li><a href="#">Mine tilbud</a></li>
+					<li><a href="#">Kontakt</a></li>
+					<li><a href="#">FAQ</a></li>
+				</ul>
+			</nav>
 		</header>
 		<main>
-			<article id="hero_article">
-				<figure>
-					<img
-						src="./img/hero_image.png"
-						alt="Et billede af en biograf"
-					/>
-					<div class="text">
-						<h2>Vinterferie i Galleriet</h2>
-						<h4>Korsbæks shoppingcenter</h4>
-					</div>
-				</figure>
-			</article>
-			<div id="sub_hero_article">
-				<article class="oplevelser_article">
-					<h2>Masser af oplevelser! spar op til 25%</h2>
-					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing
-						elit. Molestias, maiores sit? Perspiciatis facere
-						quaerat incidunt numquam culpa assumenda vero
-						perferendis reprehenderit minima odio quisquam magnam
-						omnis excepturi, praesentium ipsum, ex, reiciendis
-						cupiditate corrupti? Dignissimos officiis magnam
-						perspiciatis maxime fugit accusantium, minus ea
-						distinctio, praesentium, nostrum vel ab corporis iste
-						facilis!.
-					</p>
-				</article>
-				<article class="tilbud_article">
-					<h2>Sammensæt selv dit tilbud</h2>
-					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing
-						elit. Molestias, maiores sit? Perspiciatis facere
-						quaerat incidunt numquam culpa assumenda vero
-						perferendis reprehenderit minima odio quisquam magnam
-						omnis excepturi, praesentium ipsum, ex, reiciendis
-						cupiditate corrupti?
-					</p>
-					<button>SE TILBUD</button>
-				</article>
+			<div id="hero__section">
+				<img src="assets/hero_image.png" alt="hero" />
+				<div class="hero_subtexts">
+					<article class="hero__text__one">
+						<h2>Masser af oplevelser!<br>Spar op til 25%</h2>
+						<p>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, maiores sit? Perspiciatis facere quaerat incidunt numquam culpa assumenda vero perferendis reprehenderit minima odio quisquam magnam omnis excepturi, praesentium ipsum, ex, reiciendis cupiditate corrupti?
+						</p>
+					</article>
+					<article class="hero__text__two">
+						<h2>Sammensæt selv<br>dit tilbud</h2>
+						<p>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, maiores sit? Perspiciatis facere quaerat incidunt numquam culpa assumenda vero perferendis reprehenderit minima odio quisquam magnam omnis excepturi.
+						</p>
+						<button class="hero__button">
+							Se tilbud
+						</button>
+					</article>
+				</div>
 			</div>
-			<div id="galleriets_butikker">
+			<section id="gallery__section">
 				<h2>Galleriets butikker</h2>
-				<figure>
-					<div>
-						<img src="./img/icons/føtex.svg" alt="Føtex logo" />
-					</div>
-					<div>
-						<img src="./img/icons/normal.svg" alt="Normal logo" />
-					</div>
-					<div>
-						<img
-							src="./img/icons/slikhytten.svg"
-							alt="Slikhytten logo"
-						/>
-						<p>Slikhytten</p>
-					</div>
-					<div>
-						<img
-							src="./img/icons/korsbaekbio.svg"
-							alt="Korsbæk Biograf logo"
-						/>
-					</div>
-					<div>
-						<img
-							src="./img/icons/korsbaekswim.svg"
-							alt="Korsbaek Svømmehal logo"
-						/>
-						<p>Korsbæk Svømmehal</p>
-					</div>
-				</figure>
-			</div>
+				<div class="gallery__images">
+					<figure>
+						<img src="assets/svgs/føtex.svg" alt="gallery_image_1" />
+						<img src="assets/svgs/normal.svg" alt="gallery_image_2" />
+						<img src="assets/svgs/slikhytten.svg" alt="gallery_image_3" />
+						<img src="assets/svgs/kørsbækbio.svg" alt="gallery_image_4" />
+						<img src="assets/svgs/korsbæksvøm.svg" alt="gallery_image_5" />
+					</figure>
+				</div>
+			</section>
 		</main>
-		<footer id="footer">
-			<figure>
-				<img src="./img/logo.svg" alt="Galleriet logo" />
-			</figure>
-			<div>
-				<article>
-					<address>Galleristrædet 1</address>
-					<p>4021 Korsbæk</p>
-				</article>
-				<button>
-					<img src="./img/arrow.svg" alt="arrow" />
-				</button>
-			</div>
-			<article>
-				<p>+45 2143 6587</p>
-				<p>hej@galleriet-korsbaek.com</p>
-			</article>
-			<small>© 2021 Armadillo Design Lab.</small>
-		</footer>
 	</body>
-
 	<script src="script.js" defer></script>
 </html>
