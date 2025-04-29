@@ -78,13 +78,16 @@
 	cursor: pointer;
 }
 #header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 2rem;
-	width: 100%;
-	margin: 0 auto;
-	max-width: 1700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--tertiary-color);
 }
 #header .logo {
 	width: 200px;
@@ -102,14 +105,14 @@
 }
 #header .links_desktop ul li a:hover {
     text-decoration: underline;
-    text-underline-offset: 1.75rem;
-    text-decoration-thickness: 3px;
+    text-underline-offset: 2.5rem;
+    text-decoration-thickness: 0.3rem;
     text-decoration-color: var(--primary-color);
 }
 #header .links_desktop .active {
 	text-decoration: underline;
-    text-underline-offset: 1.75rem;
-    text-decoration-thickness: 3px;
+    text-underline-offset: 2.5rem;
+    text-decoration-thickness: 0.3rem;
     text-decoration-color: var(--primary-color);
 }
 #header #dropdown img {
@@ -136,7 +139,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 2rem;
-	max-width: 1200px;
+	max-width: 70%;
 	margin: 0 auto;
 	padding: 2rem;
 }
@@ -282,7 +285,7 @@
     margin-bottom: 16px;
     font-weight: 700;
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -294,7 +297,107 @@
     margin-bottom: 16px;
     font-weight: 700;
 }
+.kontakt_section {
+	padding: 5rem 2rem;
+	justify-content: center;
+	max-width: 500px;
+	margin: 0 auto;
+}
+.kontakt_section h2 {
+	font-size: 42px;
+	line-height: 1;
+	margin-bottom: 3rem;
+	text-align: left;
+	font-weight: 600;
+	color: var(--secondary-color);
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+.tilbud_section {
+	padding: 5rem 2rem;
+	justify-content: center;
+	max-width: 30%;
+	margin: 0 auto;
+}
+.tilbud_section h2 {
+	font-size: 42px;
+	line-height: 1;
+	margin-bottom: 3rem;
+	text-align: left;
+	font-weight: 600;
+	color: var(--secondary-color);
+}
+.tilbud_container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.tilbud_item {
+	border-top: 1px solid var(--secondary-color);
+	border-bottom: 1px solid var(--secondary-color);
+	padding: 1rem 0;
+	display: flex;
+	justify-content: center;
+}
+.tilbud_content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+.kontakt_section__container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.kontakt_section__container textarea,
+.kontakt_section__container input {
+	width: 100%;
+	padding: 0.5rem;
+}
+.kontakt_section__container label {
+	align-items: center;
+	background-color: #EC1C24;
+}
+.kontakt_section button {
+	margin-top: 0.5rem;
+	background-color: var(--primary-color);
+	padding: 0.75rem;
+	border: none;
+	cursor: pointer;
+}
+.indlos-btn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+.slet-btn {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 14px;
+    align-self: flex-start;
+	padding: 0.5rem;
+}
 @media (max-width: 768px) {
+	.kontakt_section h2 {
+		font-weight: 600;
+		font-size: 24px;
+	}
 	.oplevelser_section {
 		padding: 2rem 1rem;
 		display: flex;
@@ -433,6 +536,9 @@
 		font-size: 14px;
 		line-height: 24px;
 	}
+	#hero__section_two img {
+		height: 150px;
+	}
     #links_mobile {
         display: none;
         position: fixed;
@@ -524,5 +630,127 @@
         font-weight: 400;
         color: var(--secondary-color);
         padding-left: 1rem;
+    }
+
+	#faq__section {
+        padding: 3rem 1rem;
+    }
+    
+    #faq__section h2 {
+        font-size: 30px;
+        margin-bottom: 2rem;
+    }
+    
+    .faq__accordion__container .accordion__header {
+        padding: 1rem;
+    }
+    
+    .faq__accordion__container h3 {
+        font-size: 16px;
+    }
+    
+    .faq__accordion__container article.active .accordion__content {
+        padding: 0 1rem 1rem;
+    }
+    
+    .faq__accordion__container p {
+        font-size: 14px;
+    }
+}
+#faq__section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+#faq__section h2 {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    text-align: left;
+    color: var(--secondary-color);
+}
+
+.faq__accordion__container article {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    background-color: var(--tertiary-color);
+}
+
+.faq__accordion__container .accordion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    background-color: var(--tertiary-color);
+}
+
+.faq__accordion__container h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.faq__accordion__container .accordion__content {
+    max-height: 0;
+    padding: 0 1.5rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq__accordion__container article.active .accordion__content {
+    max-height: 1000px;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.faq__accordion__container p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.faq__accordion__container .toggle-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.faq__accordion__container .toggle-icon::before,
+.faq__accordion__container .toggle-icon::after {
+    content: '';
+    position: absolute;
+    background-color: var(--secondary-color);
+    border-radius: 1px;
+}
+
+.faq__accordion__container .toggle-icon::before {
+    width: 2px;
+    height: 12px;
+    transition: transform 0.3s ease;
+}
+
+.faq__accordion__container .toggle-icon::after {
+    width: 12px;
+    height: 2px;
+}
+
+.faq__accordion__container article.active .toggle-icon::before {
+    transform: rotate(90deg);
+}
+
+.faq__accordion__container article.active .toggle-icon {
+    border: 2px solid #EC1C24;
+}
+
+@media (max-width: 768px) {
+    .tilbud_section {
+        max-width: 90%;
     }
 }

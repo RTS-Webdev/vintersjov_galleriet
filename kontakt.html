@@ -57,7 +57,30 @@
 					<h2 class="hero__title">Kontakt os</h2>
 				</div>
 			</div>
-            <section class="kontakt_section"></section>
+            <section class="kontakt_section">
+				<h2>Kontakt Galleriet</h2>
+				<form action="" method="post">
+					<div class="kontakt_section__container">
+						<div class="kontakt_section__container__input">
+							<label for="name" class="sr-only">Navn</label>
+							<input type="text" id="name" name="name" required placeholder="Navn" />
+						</div>
+						<div class="kontakt_section__container__input">
+							<label for="name" class="sr-only">Mobil</label>
+							<input type="text" id="mobil" name="mobil" required placeholder="Mobil" />
+						</div>
+						<div class="kontakt_section__container__input">
+							<label for="email" class="sr-only">Email</label>
+							<input type="email" id="email" name="email" required placeholder="Email" />
+						</div>
+						<div class="kontakt_section__container__input">
+							<label for="message" class="sr-only">Besked</label>
+							<textarea id="message" name="message" rows="4" required placeholder="Besked"></textarea>
+						</div>
+					</div>
+					<button type="submit">Send</button>
+				</form>
+			</section>
             <section id="gallery__section">
 				<h2>Galleriets butikker</h2>
 				<div class="gallery__images">
@@ -103,5 +126,6 @@
 				<p class="footer_container__contact__copyright">&copy; 2021 Armadilo Design Lab.</p>
 			</div>
 		</footer>
+		<script src="script.js" defer></script>
     </body>
 </html>
