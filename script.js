@@ -36,3 +36,7 @@ const firstAccordionItem = document.querySelector(
 if (firstAccordionItem) {
 	firstAccordionItem.classList.add("active");
 }
+
+function openModal() {
+	document.documentElement.classList.toggle("dimmed");
+}
