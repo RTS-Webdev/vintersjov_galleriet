@@ -1,175 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Galleriet</title>
-		<link rel="stylesheet" href="style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<body>
-		<header id="header">
-			<img src="assets/svgs/logo.svg" alt="logo" class="logo" />
+<html lang="da">
 
-			<!-- dropdown button for mobile -->
-			<button id="dropdown">
-				<img src="assets/svgs/menu.svg" alt="menu" id="open" />
-				<img src="assets/svgs/x.svg" alt="close" id="close" />
-			</button>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Galleriet</title>
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet" />
+</head>
 
-			<!-- navigation links for mobile -->
-			<nav id="links_mobile">
-				<ul>
-					<li><a href="index.html">Hjem</a></li>
-					<li><a href="oplevelser.html">Oplevelser</a></li>
-					<li><a href="tilbud.html">Mine tilbud</a></li>
-					<li><a href="kontakt.html">Kontakt</a></li>
-					<li><a href="faq.html">FAQ</a></li>
-				</ul>
-			</nav>
-			
-			<!-- navigation links for desktop -->
-			<nav class="links_desktop">
-				<ul>
-					<li><a href="index.html">Hjem</a></li>
-					<li><a href="oplevelser.html">Oplevelser</a></li>
-					<li><a href="tilbud.html">Mine tilbud</a></li>
-					<li><a href="kontakt.html">Kontakt</a></li>
-					<li><a href="faq.html" class="active">FAQ</a></li>
-				</ul>
-			</nav>
-		</header>
-        <main>
-			<div id="hero__section_two">
-				<img src="assets/hero_300px.png" alt="hero" />
-				<div class="hero__title__container">
-					<h2 class="hero__title">Ofte stillede spørgsmål</h2>
-				</div>
+<body>
+	<header id="header" role="banner">
+		<a href="index.html" aria-label="Galleriets hjemmeside">
+			<img src="assets/svgs/logo.svg" alt="Galleriets logo" class="logo" />
+		</a>
+
+		<!-- dropdown button for mobile -->
+		<button id="dropdown" aria-expanded="false" aria-controls="links_mobile" aria-label="Åbn navigation">
+			<img src="assets/svgs/menu.svg" alt="" id="open" aria-hidden="true" />
+			<img src="assets/svgs/x.svg" alt="" id="close" aria-hidden="true" />
+		</button>
+
+		<!-- navigation links for mobile -->
+		<nav id="links_mobile" aria-label="Mobil navigation">
+			<ul>
+				<li><a href="index.html">Hjem</a></li>
+				<li><a href="oplevelser.html">Oplevelser</a></li>
+				<li><a href="tilbud.html">Mine tilbud</a></li>
+				<li><a href="kontakt.html">Kontakt</a></li>
+				<li><a href="faq.html" aria-current="page">FAQ</a></li>
+			</ul>
+		</nav>
+
+		<!-- navigation links for desktop -->
+		<nav class="links_desktop" aria-label="Hoved navigation">
+			<ul>
+				<li><a href="index.html">Hjem</a></li>
+				<li><a href="oplevelser.html">Oplevelser</a></li>
+				<li><a href="tilbud.html">Mine tilbud</a></li>
+				<li><a href="kontakt.html">Kontakt</a></li>
+				<li><a href="faq.html" class="active" aria-current="page">FAQ</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main id="main-content">
+		<section id="hero__section_two" aria-labelledby="hero-title">
+			<img src="assets/hero_300px.png" alt="Vinterferie i Galleriet banner billede" />
+			<div class="hero__title__container">
+				<h1 id="hero-title" class="hero__title">Ofte stillede spørgsmål</h1>
 			</div>
-			<section id="faq__section">
-				<h2>Spørgsmål og svar!</h2>
-				<div class="faq__accordion__container">
-					<article>
-						<div class="accordion__header">
-							<h3>Hvor længe gælder billetterne</h3>
-							<div class="toggle-icon"></div>
-						</div>
-						<div class="accordion__content">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur magnam sed consectetur iure nobis, eligendi illo corrupti maxime possimus explicabo itaque rem quod reprehenderit autem labore consequatur nihil non qui.</p>
-						</div>
-					</article>
-					<article>
-						<div class="accordion__header">
-							<h3>Er billetterne personlige</h3>
-							<div class="toggle-icon"></div>
-						</div>
-						<div class="accordion__content">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur magnam sed consectetur iure nobis, eligendi illo corrupti maxime possimus explicabo itaque rem quod reprehenderit autem labore consequatur nihil non qui.</p>
-						</div>
-					</article>
-					<article>
-						<div class="accordion__header">
-							<h3>Kan billetterne bruges i alle Korsbæks butikker</h3>
-							<div class="toggle-icon"></div>
-						</div>
-						<div class="accordion__content">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur magnam sed consectetur iure nobis, eligendi illo corrupti maxime possimus explicabo itaque rem quod reprehenderit autem labore consequatur nihil non qui.</p>
-						</div>
-					</article>
-					<article>
-						<div class="accordion__header">
-							<h3>Refunderes ubrugte billetter</h3>
-							<div class="toggle-icon"></div>
-						</div>
-						<div class="accordion__content">
-							<p>Projex-Tec Co. is dedicated to satisfying our customers by providing quality products & services on time & striving towards continual improvement. Our Management is committed to providing Supply, Installation, Testing, and Commissioning of Electromechanical works to its clients for various projects and has established Quality Assurance / Quality Control Programs in a manner that strives to comply with ISO 9001:2008. Projex-Tec Co. achieves the highest quality standards throughout the performance of its activities in meeting all the specifications and procedures of customer satisfaction and projects are executed in a manner that emphasizes safety, quality, and maximum cost-effectiveness.</p>
-						</div>
-					</article>
-				</div>
-			</section>
-            <section id="gallery__section">
-				<h2>Galleriets butikker</h2>
-				<div class="gallery__images">
-					<figure>
-						<div class="gallery_item">
-							<img src="assets/svgs/føtex.svg" alt="gallery_image_1" />
-							<button class="gallery_button" onclick="toggleDialog('føtex')">Se mere</button>
-						</div>
-						<div class="gallery_item">
-							<img src="assets/svgs/normal.svg" alt="gallery_image_2" />
-							<button class="gallery_button" onclick="toggleDialog('normal')">Se mere</button>
-						</div>
-						<div class="gallery_item">
-							<img src="assets/svgs/slikhytten.svg" alt="gallery_image_3" />
-							<button class="gallery_button" onclick="toggleDialog('slikhytten')">Se mere</button>
-						</div>
-						<div class="gallery_item">
-							<img src="assets/svgs/kørsbækbio.svg" alt="gallery_image_4" />
-							<button class="gallery_button" onclick="toggleDialog('kørsbækbio')">Se mere</button>
-						</div>
-						<div class="gallery_item">
-							<img src="assets/svgs/korsbæksvøm.svg" alt="gallery_image_5" />
-							<button class="gallery_button" onclick="toggleDialog('korsbæksvøm')">Se mere</button>
-						</div>
-					</figure>
-				</div>
-			</section>
-		</main>
-		<footer id="footer">
-			<div class="footer_container__main">
-				<div class="footer_container__main__logo">
-					<img src="assets/svgs/logo.svg" alt="logo" class="logo" />
-					<div class="footer_container__main__logo__address">
-						<p>Galleristrædet 1</p>
-						<p>4021 Korsbæk</p>
+		</section>
+		<section id="faq__section" aria-labelledby="faq-title">
+			<h2 id="faq-title">Spørgsmål og svar!</h2>
+			<div class="faq__container">
+				<details class="faq-item">
+					<summary>Hvor længe gælder billetterne</summary>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur magnam sed consectetur iure
+						nobis, eligendi illo corrupti maxime possimus explicabo itaque rem quod reprehenderit autem
+						labore consequatur nihil non qui.</p>
+				</details>
+
+				<details class="faq-item">
+					<summary>Er billetterne personlige</summary>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur magnam sed consectetur iure
+						nobis, eligendi illo corrupti maxime possimus explicabo itaque rem quod reprehenderit autem
+						labore consequatur nihil non qui.</p>
+				</details>
+
+				<details class="faq-item">
+					<summary>Kan billetterne bruges i alle Korsbæks butikker</summary>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur magnam sed consectetur iure
+						nobis, eligendi illo corrupti maxime possimus explicabo itaque rem quod reprehenderit autem
+						labore consequatur nihil non qui.</p>
+				</details>
+
+				<details class="faq-item">
+					<summary>Refunderes ubrugte billetter</summary>
+					<p>Projex-Tec Co. is dedicated to satisfying our customers by providing quality products & services
+						on time & striving towards continual improvement. Our Management is committed to providing
+						Supply, Installation, Testing, and Commissioning of Electromechanical works to its clients for
+						various projects and has established Quality Assurance / Quality Control Programs in a manner
+						that strives to comply with ISO 9001:2008. Projex-Tec Co. achieves the highest quality standards
+						throughout the performance of its activities in meeting all the specifications and procedures of
+						customer satisfaction and projects are executed in a manner that emphasizes safety, quality, and
+						maximum cost-effectiveness.</p>
+				</details>
+			</div>
+		</section>
+		<section id="gallery__section" aria-labelledby="gallery-title">
+			<h2 id="gallery-title">Galleriets butikker</h2>
+			<div class="gallery__images">
+				<figure>
+					<div class="gallery_item">
+						<img src="assets/svgs/føtex.svg" alt="Føtex logo" />
+						<button class="gallery_button" aria-label="Se mere om Føtex"
+							onclick="toggleDialog('føtex')"></button>
 					</div>
-				</div>
-				<div class="footer_container__main__links">
+					<div class="gallery_item">
+						<img src="assets/svgs/normal.svg" alt="Normal logo" />
+						<button class="gallery_button" aria-label="Se mere om Normal"
+							onclick="toggleDialog('normal')"></button>
+					</div>
+					<div class="gallery_item">
+						<img src="assets/svgs/slikhytten.svg" alt="Slikhytten logo" />
+						<button class="gallery_button" aria-label="Se mere om Slikhytten"
+							onclick="toggleDialog('slikhytten')"></button>
+					</div>
+					<div class="gallery_item">
+						<img src="assets/svgs/kørsbækbio.svg" alt="Kørsbæk Bio logo" />
+						<button class="gallery_button" aria-label="Se mere om Kørsbæk Bio"
+							onclick="toggleDialog('kørsbækbio')"></button>
+					</div>
+					<div class="gallery_item">
+						<img src="assets/svgs/korsbæksvøm.svg" alt="Korsbæk Svøm logo" />
+						<button class="gallery_button" aria-label="Se mere om Korsbæk Svøm"
+							onclick="toggleDialog('korsbæksvøm')"></button>
+					</div>
+				</figure>
+			</div>
+		</section>
+	</main>
+	<footer id="footer" role="contentinfo">
+		<div class="footer_container__main">
+			<div class="footer_container__main__logo">
+				<img src="assets/svgs/logo.svg" alt="Galleriets logo" class="logo" />
+				<address class="footer_container__main__logo__address">
+					<p>Galleristrædet 1</p>
+					<p>4021 Korsbæk</p>
+				</address>
+			</div>
+			<div class="footer_container__main__links">
+				<nav aria-label="Footer navigation">
 					<ul>
 						<li><a href="#">About</a></li>
 						<li><a href="#">Services</a></li>
 						<li><a href="#">Contact</a></li>
 					</ul>
-					<button class="footer_container__main__button">
-						Kontakt os
-					</button>
-				</div>
-				<button class="footer_container__main__arrow" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-					<img src="assets/svgs/arrow.svg" alt="arrow" />
-				</button>
+				</nav>
+				<a href="kontakt.html" role="button" class="footer_container__main__button"
+					aria-label="Gå til kontakt side">
+					Kontakt os
+				</a>
 			</div>
-
-			<div class="footer_container__contact">
-				<div class="footer_container__contact__info">
-					<p>+45 2143 6587</p>
-					<p>hej@galleriet-korsbaek.com</p>
-				</div>
-				<p class="footer_container__contact__copyright">&copy; 2021 Armadilo Design Lab.</p>
-			</div>
-		</footer>
-		<div class="dialog">
-			<div class="dialog_content">
-				<button class="close_button" onclick="toggleDialog()">×</button>
-				<div class="dialog_image_container">
-					<img id="dialog_image" src="" alt="Butiksbillede" />
-				</div>
-				<h3 id="dialog_title"></h3>
-				<p id="dialog_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, maiores sit?
-					Perspiciatis facere quaerat incidunt numquam culpa assumenda vero perferendis reprehenderit minima odio
-					quisquam magnam omnis excepturi, praesentium ipsum, ex, reiciendis cupiditate corrupti?</p>
-			</div>
+			<button class="footer_container__main__arrow" aria-label="Gå til toppen af siden"
+				onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+				<img src="assets/svgs/arrow.svg" alt="" aria-hidden="true" />
+			</button>
 		</div>
-		<script src="script.js" defer></script>
-    </body>
+
+		<div class="footer_container__contact">
+			<address class="footer_container__contact__info">
+				<p><a href="tel:+4521436587">+45 2143 6587</a></p>
+				<p><a href="mailto:hej@galleriet-korsbaek.com">hej@galleriet-korsbaek.com</a></p>
+			</address>
+			<p class="footer_container__contact__copyright">&copy; 2021 Armadilo Design Lab.</p>
+		</div>
+	</footer>
+	<div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog_title" aria-describedby="dialog_text"
+		hidden>
+		<div class="dialog_content">
+			<button class="close_button" aria-label="Luk dialog" onclick="toggleDialog()">×</button>
+			<div class="dialog_image_container">
+				<img id="dialog_image" src="" alt="Butiksbillede" />
+			</div>
+			<h3 id="dialog_title"></h3>
+			<p id="dialog_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, maiores sit?
+				Perspiciatis facere quaerat incidunt numquam culpa assumenda vero perferendis reprehenderit minima odio
+				quisquam magnam omnis excepturi, praesentium ipsum, ex, reiciendis cupiditate corrupti?</p>
+		</div>
+	</div>
+	<script src="script.js" defer></script>
+</body>
+
 </html>

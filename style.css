@@ -1,3 +1,7 @@
+/* Importer basis utilities og komponenter */
+@import 'utils.css';
+@import 'components.css';
+
 * {
 	margin: 0;
 	padding: 0;
@@ -11,6 +15,51 @@
 	--tertiary-color: #ffffff;
 	--quaternary-color: #F2F3F5;
 	--montserrat: "Montserrat", sans-serif;
+}
+
+:focus {
+    outline-offset: 2px;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.dialog[hidden] {
+    display: none;
+}
+
+.dialog:not([hidden]) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#links_mobile.open {
+    display: block;
+}
+
+.accordion__header[aria-expanded="true"] .toggle-icon {
+    transform: rotate(45deg);
+}
+
+.accordion__content:not([hidden]) {
+    display: block;
 }
 
 .oplevelser_section {
@@ -278,6 +327,11 @@
 	padding-left: 2rem;
 }
 
+#footer .footer_container__contact__info a {
+	text-decoration: none;
+	color: var(--secondary-color);
+}
+
 #footer .footer_container__main__links ul {
 	display: flex;
 	flex-direction: column;
@@ -298,10 +352,11 @@
 	background: var(--primary-color);
 	border: none;
 	cursor: pointer;
-	padding: 1rem;
+	padding: 0.5rem;
 	font-weight: 500;
 	font-size: 14px;
 	color: var(--secondary-color);
+	text-decoration: none;
 }
 
 #footer .footer_container__main__arrow {
@@ -362,18 +417,6 @@
 	text-align: left;
 	font-weight: 600;
 	color: var(--secondary-color);
-}
-
-.sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap;
-	border-width: 0;
 }
 
 .tilbud__section {
@@ -791,14 +834,6 @@
 		margin-bottom: 2rem;
 	}
 
-	.faq__accordion__container .accordion__header {
-		padding: 1rem;
-	}
-
-	.faq__accordion__container h3 {
-		font-size: 16px;
-	}
-
 	.faq__accordion__container article.active .accordion__content {
 		padding: 0 1rem 1rem;
 	}
@@ -857,7 +892,12 @@
 	color: var(--secondary-color);
 }
 
-.faq__accordion__container article {
+.faq__container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.faq-item {
 	border: 1px solid #e0e0e0;
 	border-radius: 4px;
 	margin-bottom: 1rem;
@@ -865,74 +905,74 @@
 	background-color: var(--tertiary-color);
 }
 
-.faq__accordion__container .accordion__header {
+.faq-item summary {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 1.5rem;
 	cursor: pointer;
-	background-color: var(--tertiary-color);
-}
-
-.faq__accordion__container h3 {
 	font-size: 18px;
 	font-weight: 500;
 	color: var(--secondary-color);
-}
-
-.faq__accordion__container .accordion__content {
-	max-height: 0;
-	padding: 0 1.5rem;
-	overflow: hidden;
-	transition: max-height 0.3s ease, padding 0.3s ease;
-}
-
-.faq__accordion__container article.active .accordion__content {
-	max-height: 1000px;
-	padding: 0 1.5rem 1.5rem;
-}
-
-.faq__accordion__container p {
-	color: var(--secondary-color);
-	line-height: 1.6;
-	font-size: 16px;
-}
-
-.faq__accordion__container .toggle-icon {
-	width: 24px;
-	height: 24px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	list-style: none;
 	position: relative;
 }
 
-.faq__accordion__container .toggle-icon::before,
-.faq__accordion__container .toggle-icon::after {
-	content: '';
-	position: absolute;
-	background-color: var(--secondary-color);
-	border-radius: 1px;
+.faq-item summary::-webkit-details-marker {
+	display: none;
 }
 
-.faq__accordion__container .toggle-icon::before {
-	width: 2px;
-	height: 12px;
+.faq-item summary::after {
+	content: '+';
+	font-size: 24px;
+	font-weight: 300;
+	color: var(--secondary-color);
 	transition: transform 0.3s ease;
 }
 
-.faq__accordion__container .toggle-icon::after {
-	width: 12px;
-	height: 2px;
+.faq-item[open] summary::after {
+	content: '+';
+	transform: rotate(45deg);
 }
 
-.faq__accordion__container article.active .toggle-icon::before {
-	transform: rotate(90deg);
+.faq-item[open] summary {
+	border-bottom: 1px solid #e0e0e0;
 }
 
-.faq__accordion__container article.active .toggle-icon {
-	border: 2px solid #EC1C24;
+.faq-item p {
+	padding: 1.5rem;
+	color: var(--secondary-color);
+	line-height: 1.6;
+	font-size: 16px;
+	margin: 0;
+}
+
+@media (max-width: 768px) {
+	.faq-item summary {
+		padding: 1rem;
+		font-size: 16px;
+	}
+
+	.faq-item p {
+		padding: 1rem;
+		font-size: 14px;
+	}
+}
+
+.faq__accordion__container article {
+	display: none;
+}
+
+.faq__accordion__container .accordion__header {
+	display: none;
+}
+
+.faq__accordion__container .accordion__content {
+	display: none;
+}
+
+.faq__accordion__container .toggle-icon {
+	display: none;
 }
 
 .gallery_item {
@@ -961,7 +1001,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.5);
 	z-index: 1000;
 	justify-content: center;
 	align-items: center;
@@ -973,46 +1013,61 @@
 
 .dialog_content {
 	background-color: var(--tertiary-color);
-	max-width: 600px;
-	width: 90%;
 	padding: 2rem;
-	border-radius: 4px;
+	border-radius: 0.5rem;
 	position: relative;
+	width: 80%;
+	max-width: 600px;
 }
 
 .close_button {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 1rem;
+	right: 1rem;
 	background: none;
 	border: none;
-	font-size: 24px;
+	font-size: 1.5rem;
 	cursor: pointer;
-}
-
-.dialog_image_container {
+	color: var(--secondary-color);
+	padding: 0.5rem;
+	border-radius: 50%;
+	line-height: 1;
 	display: flex;
 	justify-content: center;
-	margin-bottom: 1rem;
+	align-items: center;
+	width: 2rem;
+	height: 2rem;
 }
 
-#dialog_image {
-	max-width: 100%;
-	height: auto;
-	max-height: 200px;
-	object-fit: contain;
+.close_button:hover, 
+.close_button:focus {
+    background-color: var(--quaternary-color);
 }
 
-#dialog_title {
-	font-size: 24px;
-	margin-bottom: 1rem;
-	color: var(--secondary-color);
-	font-weight: 600;
+input:focus, 
+textarea:focus, 
+button:focus {
+    outline-offset: 2px;
 }
 
-#dialog_text {
-	color: var(--secondary-color);
-	line-height: 1.6;
+.kontakt_section__container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+button, 
+a[role="button"],
+.gallery_button,
+.accordion__header[role="button"] {
+    cursor: pointer;
+}
+
+button:hover,
+a[role="button"]:hover,
+.gallery_button:hover,
+.accordion__header[role="button"]:hover {
+    opacity: 0.9;
 }
 
 #links_mobile ul {

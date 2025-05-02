@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Galleriet</title>
-	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="styles.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -13,19 +13,21 @@
 </head>
 
 <body>
-	<header id="header">
-		<img src="assets/svgs/logo.svg" alt="logo" class="logo" />
+	<header id="header" role="banner">
+		<a href="index.html" aria-label="Galleriets hjemmeside">
+			<img src="assets/svgs/logo.svg" alt="Galleriets logo" class="logo" />
+		</a>
 
 		<!-- dropdown button for mobile -->
-		<button id="dropdown">
-			<img src="assets/svgs/menu.svg" alt="menu" id="open" />
-			<img src="assets/svgs/x.svg" alt="close" id="close" />
+		<button id="dropdown" aria-expanded="false" aria-controls="links_mobile" aria-label="Åbn navigation">
+			<img src="assets/svgs/menu.svg" alt="" id="open" aria-hidden="true" />
+			<img src="assets/svgs/x.svg" alt="" id="close" aria-hidden="true" />
 		</button>
 
 		<!-- navigation links for mobile -->
-		<nav id="links_mobile">
+		<nav id="links_mobile" aria-label="Mobil navigation">
 			<ul>
-				<li><a href="index.html">Hjem</a></li>
+				<li><a href="index.html" aria-current="page">Hjem</a></li>
 				<li><a href="oplevelser.html">Oplevelser</a></li>
 				<li><a href="tilbud.html">Mine tilbud</a></li>
 				<li><a href="kontakt.html">Kontakt</a></li>
@@ -34,9 +36,9 @@
 		</nav>
 
 		<!-- navigation links for desktop -->
-		<nav class="links_desktop">
+		<nav class="links_desktop" aria-label="Hoved navigation">
 			<ul>
-				<li><a href="index.html" class="active">Hjem</a></li>
+				<li><a href="index.html" class="active" aria-current="page">Hjem</a></li>
 				<li><a href="oplevelser.html">Oplevelser</a></li>
 				<li><a href="tilbud.html">Mine tilbud</a></li>
 				<li><a href="kontakt.html">Kontakt</a></li>
@@ -44,12 +46,12 @@
 			</ul>
 		</nav>
 	</header>
-	<main>
-		<div id="hero__section">
-			<img src="assets/hero_image.png" alt="hero" />
+	<main id="main-content">
+		<section id="hero__section" aria-labelledby="hero-title">
+			<img src="assets/hero_image.png" alt="Vinterferie i Galleriet banner billede" />
 			<div class="hero__title__container">
-				<h2 class="hero__title">Vinterferie i Galleriet</h2>
-				<h4 class="hero__subtitle">Korsbæks shoppingcenter</h4>
+				<h1 id="hero-title" class="hero__title">Vinterferie i Galleriet</h1>
+				<h2 class="hero__subtitle">Korsbæks shoppingcenter</h2>
 			</div>
 			<div class="hero_subtexts">
 				<article class="hero__text__one">
@@ -67,77 +69,79 @@
 						facere quaerat incidunt numquam culpa assumenda vero perferendis reprehenderit minima odio
 						quisquam magnam omnis excepturi.
 					</p>
-					<button class="hero__button" onclick="window.location.href='oplevelser.html'">
+					<a href="oplevelser.html" class="hero__button" role="button" aria-label="Se alle tilbud">
 						Se tilbud
-					</button>
+					</a>
 				</article>
 			</div>
-		</div>
-		<section id="gallery__section">
-			<h2>Galleriets butikker</h2>
+		</section>
+		<section id="gallery__section" aria-labelledby="gallery-title">
+			<h2 id="gallery-title">Galleriets butikker</h2>
 			<div class="gallery__images">
 				<figure>
 					<div class="gallery_item">
-						<img src="assets/svgs/føtex.svg" alt="gallery_image_1" />
-						<button class="gallery_button" onclick="toggleDialog('føtex')">Se mere</button>
+						<img src="assets/svgs/føtex.svg" alt="Føtex logo" />
+						<button class="gallery_button" aria-label="Se mere om Føtex" onclick="toggleDialog('føtex')"></button>
 					</div>
 					<div class="gallery_item">
-						<img src="assets/svgs/normal.svg" alt="gallery_image_2" />
-						<button class="gallery_button" onclick="toggleDialog('normal')">Se mere</button>
+						<img src="assets/svgs/normal.svg" alt="Normal logo" />
+						<button class="gallery_button" aria-label="Se mere om Normal" onclick="toggleDialog('normal')"></button>
 					</div>
 					<div class="gallery_item">
-						<img src="assets/svgs/slikhytten.svg" alt="gallery_image_3" />
-						<button class="gallery_button" onclick="toggleDialog('slikhytten')">Se mere</button>
+						<img src="assets/svgs/slikhytten.svg" alt="Slikhytten logo" />
+						<button class="gallery_button" aria-label="Se mere om Slikhytten" onclick="toggleDialog('slikhytten')"></button>
 					</div>
 					<div class="gallery_item">
-						<img src="assets/svgs/kørsbækbio.svg" alt="gallery_image_4" />
-						<button class="gallery_button" onclick="toggleDialog('kørsbækbio')">Se mere</button>
+						<img src="assets/svgs/kørsbækbio.svg" alt="Kørsbæk Bio logo" />
+						<button class="gallery_button" aria-label="Se mere om Kørsbæk Bio" onclick="toggleDialog('kørsbækbio')"></button>
 					</div>
 					<div class="gallery_item">
-						<img src="assets/svgs/korsbæksvøm.svg" alt="gallery_image_5" />
-						<button class="gallery_button" onclick="toggleDialog('korsbæksvøm')">Se mere</button>
+						<img src="assets/svgs/korsbæksvøm.svg" alt="Korsbæk Svøm logo" />
+						<button class="gallery_button" aria-label="Se mere om Korsbæk Svøm" onclick="toggleDialog('korsbæksvøm')"></button>
 					</div>
 				</figure>
 			</div>
 		</section>
 	</main>
-	<footer id="footer">
+	<footer id="footer" role="contentinfo">
 		<div class="footer_container__main">
 			<div class="footer_container__main__logo">
-				<img src="assets/svgs/logo.svg" alt="logo" class="logo" />
-				<div class="footer_container__main__logo__address">
+				<img src="assets/svgs/logo.svg" alt="Galleriets logo" class="logo" />
+				<address class="footer_container__main__logo__address">
 					<p>Galleristrædet 1</p>
 					<p>4021 Korsbæk</p>
-				</div>
+				</address>
 			</div>
 			<div class="footer_container__main__links">
-				<ul>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Services</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-				<button class="footer_container__main__button">
+				<nav aria-label="Footer navigation">
+					<ul>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+				<a href="kontakt.html" role="button" class="footer_container__main__button" aria-label="Gå til kontakt side">
 					Kontakt os
-				</button>
+				</a>
 			</div>
-			<button class="footer_container__main__arrow" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-				<img src="assets/svgs/arrow.svg" alt="arrow" />
+			<button class="footer_container__main__arrow" aria-label="Gå til toppen af siden" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+				<img src="assets/svgs/arrow.svg" alt="" aria-hidden="true" />
 			</button>
 		</div>
 
 		<div class="footer_container__contact">
-			<div class="footer_container__contact__info">
-				<p>+45 2143 6587</p>
-				<p>hej@galleriet-korsbaek.com</p>
-			</div>
+			<address class="footer_container__contact__info">
+				<p><a href="tel:+4521436587">+45 2143 6587</a></p>
+				<p><a href="mailto:hej@galleriet-korsbaek.com">hej@galleriet-korsbaek.com</a></p>
+			</address>
 			<p class="footer_container__contact__copyright">&copy; 2021 Armadilo Design Lab.</p>
 		</div>
 	</footer>
-	<div class="dialog">
+	<div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog_title" aria-describedby="dialog_text" hidden>
 		<div class="dialog_content">
-			<button class="close_button" onclick="toggleDialog()">×</button>
+			<button class="close_button" aria-label="Luk dialog" onclick="toggleDialog()">×</button>
 			<div class="dialog_image_container">
-				<img id="dialog_image" src="" alt="Butiksbillede" />
+				<img id="dialog_image" alt="Butiksbillede" />
 			</div>
 			<h3 id="dialog_title"></h3>
 			<p id="dialog_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, maiores sit?
