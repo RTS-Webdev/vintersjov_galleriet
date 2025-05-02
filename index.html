@@ -1,119 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Galleriet</title>
-		<link rel="stylesheet" href="style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<body>
-		<header id="header">
-			<img src="assets/svgs/logo.svg" alt="logo" class="logo" />
 
-			<!-- dropdown button for mobile -->
-			<button id="dropdown">
-				<img src="assets/svgs/menu.svg" alt="menu" id="open" />
-				<img src="assets/svgs/x.svg" alt="close" id="close" />
-			</button>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Galleriet</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet" />
+</head>
 
-			<!-- navigation links for mobile -->
-			<nav id="links_mobile">
-				<ul>
-					<li><a href="index.html">Hjem</a></li>
-					<li><a href="oplevelser.html">Oplevelser</a></li>
-					<li><a href="tilbud.html">Mine tilbud</a></li>
-					<li><a href="kontakt.html">Kontakt</a></li>
-					<li><a href="faq.html">FAQ</a></li>
-				</ul>
-			</nav>
-			
-			<!-- navigation links for desktop -->
-			<nav class="links_desktop">
-				<ul>
-					<li><a href="index.html" class="active">Hjem</a></li>
-					<li><a href="oplevelser.html">Oplevelser</a></li>
-					<li><a href="tilbud.html">Mine tilbud</a></li>
-					<li><a href="kontakt.html">Kontakt</a></li>
-					<li><a href="faq.html">FAQ</a></li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<div id="hero__section">
-				<img src="assets/hero_image.png" alt="hero" />
-				<div class="hero__title__container">
-					<h2 class="hero__title">Vinterferie i Galleriet</h2>
-					<h4 class="hero__subtitle">Korsbæks shoppingcenter</h4>
-				</div>
-				<div class="hero_subtexts">
-					<article class="hero__text__one">
-						<h2>Masser af oplevelser!<br>Spar op til 25%</h2>
-						<p>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, maiores sit? Perspiciatis facere quaerat incidunt numquam culpa assumenda vero perferendis reprehenderit minima odio quisquam magnam omnis excepturi, praesentium ipsum, ex, reiciendis cupiditate corrupti?
-						</p>
-					</article>
-					<article class="hero__text__two">
-						<h2>Sammensæt selv<br>dit tilbud</h2>
-						<p>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, maiores sit? Perspiciatis facere quaerat incidunt numquam culpa assumenda vero perferendis reprehenderit minima odio quisquam magnam omnis excepturi.
-						</p>
-						<button class="hero__button" onclick="window.location.href='oplevelser.html'">
-							Se tilbud
-						</button>
-					</article>
+<body>
+	<header id="header">
+		<img src="assets/svgs/logo.svg" alt="logo" class="logo" />
+
+		<!-- dropdown button for mobile -->
+		<button id="dropdown">
+			<img src="assets/svgs/menu.svg" alt="menu" id="open" />
+			<img src="assets/svgs/x.svg" alt="close" id="close" />
+		</button>
+
+		<!-- navigation links for mobile -->
+		<nav id="links_mobile">
+			<ul>
+				<li><a href="index.html">Hjem</a></li>
+				<li><a href="oplevelser.html">Oplevelser</a></li>
+				<li><a href="tilbud.html">Mine tilbud</a></li>
+				<li><a href="kontakt.html">Kontakt</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+			</ul>
+		</nav>
+
+		<!-- navigation links for desktop -->
+		<nav class="links_desktop">
+			<ul>
+				<li><a href="index.html" class="active">Hjem</a></li>
+				<li><a href="oplevelser.html">Oplevelser</a></li>
+				<li><a href="tilbud.html">Mine tilbud</a></li>
+				<li><a href="kontakt.html">Kontakt</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div id="hero__section">
+			<img src="assets/hero_image.png" alt="hero" />
+			<div class="hero__title__container">
+				<h2 class="hero__title">Vinterferie i Galleriet</h2>
+				<h4 class="hero__subtitle">Korsbæks shoppingcenter</h4>
+			</div>
+			<div class="hero_subtexts">
+				<article class="hero__text__one">
+					<h2>Masser af oplevelser!<br>Spar op til 25%</h2>
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, maiores sit? Perspiciatis
+						facere quaerat incidunt numquam culpa assumenda vero perferendis reprehenderit minima odio
+						quisquam magnam omnis excepturi, praesentium ipsum, ex, reiciendis cupiditate corrupti?
+					</p>
+				</article>
+				<article class="hero__text__two">
+					<h2>Sammensæt selv<br>dit tilbud</h2>
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, maiores sit? Perspiciatis
+						facere quaerat incidunt numquam culpa assumenda vero perferendis reprehenderit minima odio
+						quisquam magnam omnis excepturi.
+					</p>
+					<button class="hero__button" onclick="window.location.href='oplevelser.html'">
+						Se tilbud
+					</button>
+				</article>
+			</div>
+		</div>
+		<section id="gallery__section">
+			<h2>Galleriets butikker</h2>
+			<div class="gallery__images">
+				<figure>
+					<div class="gallery_item">
+						<img src="assets/svgs/føtex.svg" alt="gallery_image_1" />
+						<button class="gallery_button" onclick="toggleDialog('føtex')">Se mere</button>
+					</div>
+					<div class="gallery_item">
+						<img src="assets/svgs/normal.svg" alt="gallery_image_2" />
+						<button class="gallery_button" onclick="toggleDialog('normal')">Se mere</button>
+					</div>
+					<div class="gallery_item">
+						<img src="assets/svgs/slikhytten.svg" alt="gallery_image_3" />
+						<button class="gallery_button" onclick="toggleDialog('slikhytten')">Se mere</button>
+					</div>
+					<div class="gallery_item">
+						<img src="assets/svgs/kørsbækbio.svg" alt="gallery_image_4" />
+						<button class="gallery_button" onclick="toggleDialog('kørsbækbio')">Se mere</button>
+					</div>
+					<div class="gallery_item">
+						<img src="assets/svgs/korsbæksvøm.svg" alt="gallery_image_5" />
+						<button class="gallery_button" onclick="toggleDialog('korsbæksvøm')">Se mere</button>
+					</div>
+				</figure>
+			</div>
+		</section>
+	</main>
+	<footer id="footer">
+		<div class="footer_container__main">
+			<div class="footer_container__main__logo">
+				<img src="assets/svgs/logo.svg" alt="logo" class="logo" />
+				<div class="footer_container__main__logo__address">
+					<p>Galleristrædet 1</p>
+					<p>4021 Korsbæk</p>
 				</div>
 			</div>
-			<section id="gallery__section">
-				<h2>Galleriets butikker</h2>
-				<div class="gallery__images">
-					<figure>
-						<img src="assets/svgs/føtex.svg" alt="gallery_image_1" />
-						<img src="assets/svgs/normal.svg" alt="gallery_image_2" />
-						<img src="assets/svgs/slikhytten.svg" alt="gallery_image_3" />
-						<img src="assets/svgs/kørsbækbio.svg" alt="gallery_image_4" />
-						<img src="assets/svgs/korsbæksvøm.svg" alt="gallery_image_5" />
-					</figure>
-				</div>
-			</section>
-		</main>
-		<footer id="footer">
-			<div class="footer_container__main">
-				<div class="footer_container__main__logo">
-					<img src="assets/svgs/logo.svg" alt="logo" class="logo" />
-					<div class="footer_container__main__logo__address">
-						<p>Galleristrædet 1</p>
-						<p>4021 Korsbæk</p>
-					</div>
-				</div>
-				<div class="footer_container__main__links">
-					<ul>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
-					<button class="footer_container__main__button">
-						Kontakt os
-					</button>
-				</div>
-				<button class="footer_container__main__arrow" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-					<img src="assets/svgs/arrow.svg" alt="arrow" />
+			<div class="footer_container__main__links">
+				<ul>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<button class="footer_container__main__button">
+					Kontakt os
 				</button>
 			</div>
+			<button class="footer_container__main__arrow" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+				<img src="assets/svgs/arrow.svg" alt="arrow" />
+			</button>
+		</div>
 
-			<div class="footer_container__contact">
-				<div class="footer_container__contact__info">
-					<p>+45 2143 6587</p>
-					<p>hej@galleriet-korsbaek.com</p>
-				</div>
-				<p class="footer_container__contact__copyright">&copy; 2021 Armadilo Design Lab.</p>
+		<div class="footer_container__contact">
+			<div class="footer_container__contact__info">
+				<p>+45 2143 6587</p>
+				<p>hej@galleriet-korsbaek.com</p>
 			</div>
-		</footer>
-		<script src="script.js" defer></script>
-	</body>
+			<p class="footer_container__contact__copyright">&copy; 2021 Armadilo Design Lab.</p>
+		</div>
+	</footer>
+	<div class="dialog">
+		<div class="dialog_content">
+			<button class="close_button" onclick="toggleDialog()">×</button>
+			<div class="dialog_image_container">
+				<img id="dialog_image" src="" alt="Butiksbillede" />
+			</div>
+			<h3 id="dialog_title"></h3>
+			<p id="dialog_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, maiores sit?
+				Perspiciatis facere quaerat incidunt numquam culpa assumenda vero perferendis reprehenderit minima odio
+				quisquam magnam omnis excepturi, praesentium ipsum, ex, reiciendis cupiditate corrupti?</p>
+		</div>
+	</div>
+	<script src="script.js" defer></script>
+</body>
+
 </html>

@@ -102,11 +102,26 @@
 				<h2>Galleriets butikker</h2>
 				<div class="gallery__images">
 					<figure>
-						<img src="assets/svgs/føtex.svg" alt="gallery_image_1" />
-						<img src="assets/svgs/normal.svg" alt="gallery_image_2" />
-						<img src="assets/svgs/slikhytten.svg" alt="gallery_image_3" />
-						<img src="assets/svgs/kørsbækbio.svg" alt="gallery_image_4" />
-						<img src="assets/svgs/korsbæksvøm.svg" alt="gallery_image_5" />
+						<div class="gallery_item">
+							<img src="assets/svgs/føtex.svg" alt="gallery_image_1" />
+							<button class="gallery_button" onclick="toggleDialog('føtex')">Se mere</button>
+						</div>
+						<div class="gallery_item">
+							<img src="assets/svgs/normal.svg" alt="gallery_image_2" />
+							<button class="gallery_button" onclick="toggleDialog('normal')">Se mere</button>
+						</div>
+						<div class="gallery_item">
+							<img src="assets/svgs/slikhytten.svg" alt="gallery_image_3" />
+							<button class="gallery_button" onclick="toggleDialog('slikhytten')">Se mere</button>
+						</div>
+						<div class="gallery_item">
+							<img src="assets/svgs/kørsbækbio.svg" alt="gallery_image_4" />
+							<button class="gallery_button" onclick="toggleDialog('kørsbækbio')">Se mere</button>
+						</div>
+						<div class="gallery_item">
+							<img src="assets/svgs/korsbæksvøm.svg" alt="gallery_image_5" />
+							<button class="gallery_button" onclick="toggleDialog('korsbæksvøm')">Se mere</button>
+						</div>
 					</figure>
 				</div>
 			</section>
@@ -143,6 +158,18 @@
 				<p class="footer_container__contact__copyright">&copy; 2021 Armadilo Design Lab.</p>
 			</div>
 		</footer>
+		<div class="dialog">
+			<div class="dialog_content">
+				<button class="close_button" onclick="toggleDialog()">×</button>
+				<div class="dialog_image_container">
+					<img id="dialog_image" src="" alt="Butiksbillede" />
+				</div>
+				<h3 id="dialog_title"></h3>
+				<p id="dialog_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, maiores sit?
+					Perspiciatis facere quaerat incidunt numquam culpa assumenda vero perferendis reprehenderit minima odio
+					quisquam magnam omnis excepturi, praesentium ipsum, ex, reiciendis cupiditate corrupti?</p>
+			</div>
+		</div>
 		<script src="script.js" defer></script>
     </body>
 </html>

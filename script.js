@@ -3,9 +3,27 @@ function toggleMenu() {
 	button.classList.toggle("active");
 }
 
-function toggleDialog() {
+function toggleDialog(storeId) {
     const dialog = document.querySelector(".dialog");
-    dialog.classList.toggle("active");
+    
+    if (storeId) {
+        const dialogImage = document.getElementById("dialog_image");
+        const dialogTitle = document.getElementById("dialog_title");
+        
+        // Sæt billedet og titlen baseret på den valgte butik
+        dialogImage.src = `assets/svgs/${storeId}.svg`;
+        dialogTitle.textContent = capitalizeFirstLetter(storeId);
+        
+        // Vis dialogen
+        dialog.classList.add("active");
+    } else {
+        // Skjul dialogen hvis ingen butiks-id er givet
+        dialog.classList.remove("active");
+    }
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 const menu = document.getElementById("dropdown");
@@ -35,8 +53,4 @@ const firstAccordionItem = document.querySelector(
 );
 if (firstAccordionItem) {
 	firstAccordionItem.classList.add("active");
-}
-
-function openModal() {
-	document.documentElement.classList.toggle("dimmed");
 }
